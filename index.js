@@ -25,6 +25,7 @@ async function updateGist() {
   
   const pushEvents = events.data.filter(event => event.type === "PushEvent");
   const totalCommits = pushEvents.length;
+  const maxCapacity = 100;
 
   const greetings = {
     Morning: ["🍳 Cooking up some new features.", "🥐 Croissant and clean code.", "☕ Fresh coffee and fresh commits."],
@@ -51,7 +52,7 @@ async function updateGist() {
   const currentGreeting = greetings[maxType][Math.floor(Math.random() * greetings[maxType].length)];
 
   const statsLines = Object.entries(stats).map(([label, count]) => {
-    const percentage = totalCommits > 0 ? ((count / totalCommits) * 100).toFixed(1) : "0.0";
+    const percentage = ((count / maxCapacity) * 100).toFixed(1);
     const bar = "█".repeat(Math.floor(percentage / 4)).padEnd(25, "░");
     return `${label.padEnd(12)} ${count.toString().padStart(3)} commits    ${bar} ${percentage}%`;
   });
