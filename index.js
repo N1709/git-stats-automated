@@ -51,11 +51,12 @@ async function updateGist() {
 
   const statsLines = Object.entries(stats).map(([label, count]) => {
     const percentage = totalCommits > 0 ? ((count / totalCommits) * 100).toFixed(1) : "0.0";
+    
     const barWidth = 20;
     const completed = Math.round((percentage / 100) * barWidth);
     const bar = "█".repeat(completed).padEnd(barWidth, "░");
 
-    return `${label.padEnd(12)} ${count.toString().padStart(3)} commits    ${bar} ${percentage.padStart(5)}%`;
+    return `${label.padEnd(12)} ${count.toString().padStart(3)} commits  ${bar} ${percentage.padStart(5)}%`;
   });
 
   const filesUpdate = {};
