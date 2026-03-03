@@ -1,8 +1,8 @@
 <div align="center">
 
-# Productivity Pulse
+# Productivity Pulse 🚀
 
-**Automated activity tracking for your GitHub profile.**
+**An automated system to track and display your GitHub activity distribution.**
 
 <br />
 
@@ -12,37 +12,37 @@
 
 <br />
 
-### Workflow Overview
-This system monitors your last 100 public activities to map your daily productivity distribution.
-The data is synchronized directly to a GitHub Gist to enhance your profile dynamically.
+### 📊 Personal Coding Rhythm
+This tool analyzes your last 100 public events to generate a precise visual representation of your productivity across four time segments: Morning, Daytime, Evening, and Night.
 
 ---
 
-### Setup Guide
+### 🛠️ Configuration Guide
 
-**1. Fork this Repository**
-You must fork this repository to your own account to enable the workflow to run within your environment.
+#### 1. Setup Environment Secrets
+Go to your repository **Settings > Secrets and variables > Actions** and add these three secrets:
 
-**2. Secret Configuration**
-Add the following variables in **Settings > Secrets and variables > Actions**:
-
-| Key | Purpose |
+| Name | Value Description |
 | :--- | :--- |
-| GH_TOKEN | Personal Access Token (Classic) with Gist and Repo scopes. |
-| GIST_ID | The unique identifier from your Gist URL. |
-| TIMEZONE | Set to Asia/Jakarta or your local timezone. |
-| MY_PLAYLIST_LINK | Your preferred music playlist URL. |
+| **GH_TOKEN** | Your Personal Access Token (classic) with `gist` and `repo` scopes. |
+| **GIST_ID** | The ID from your Gist URL (e.g., `https://gist.github.com/user/`**`id_di_sini`**). |
+| **TIMEZONE** | Your local timezone (default: `Asia/Jakarta`). |
 
-**3. Execution**
-Enable the **Actions** tab, then trigger the workflow manually or let it run automatically every hour.
+#### 2. Workflow Trigger
+The system is pre-configured to run every hour. You can also trigger it manually:
+- Go to the **Actions** tab.
+- Select the **Update Gist** workflow.
+- Click **Run workflow**.
 
 ---
 
-### Technical Stack
-Node.js • Octokit v19 • GitHub Actions • Date-fns
+### 💻 Technical Implementation
+- **Scale**: Dynamic percentage calculation based on actual commit volume.
+- **Visuals**: Precise 20-character bar chart with fixed-width alignment.
+- **Backend**: Node.js using `@octokit/rest` for seamless GitHub API integration.
 
 <br />
 
-*Your activity defines your rhythm. Keep coding.*
+*Crafted for developers who value precision in their profile.*
 
 </div>
