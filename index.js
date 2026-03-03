@@ -27,9 +27,9 @@ async function updateGist() {
 
   const greetings = {
     Morning: ["🍳 Cooking up some new features.", "🥐 Croissant and clean code.", "☕ Fresh coffee and fresh commits."],
-    Daytime: ["🍱 Bento box and bug fixing.", "🍕 Powering through with pizza.", "💻 Deep in the flow of daylight."],
-    Evening: ["🌮 Tacos and technical debt.", "🌇 Refining thoughts under the evening sky.", "🎨 Painting the code with evening hues."],
-    Night: ["🍜 Late night ramen and refactoring.", "🌙 Architecting dreams in the night.", "🐙 The night is quiet, the code is loud."]
+    Daytime: [" Bento box and bug fixing.", " Powering through with pizza.", " Deep in the flow of daylight."],
+    Evening: ["🌮 Tacos and technical debt.", " Refining thoughts under the evening sky.", " Painting the code with evening hues."],
+    Night: [" Ramen and refactoring.", " Architecting dreams in the night.", "🐙 The night is quiet, the code is loud."]
   };
 
   pushEvents.forEach(event => {
@@ -50,14 +50,12 @@ async function updateGist() {
   const currentGreeting = greetings[maxType][Math.floor(Math.random() * greetings[maxType].length)];
 
   const statsLines = Object.entries(stats).map(([label, count]) => {
-    
     const percentage = totalCommits > 0 ? ((count / totalCommits) * 100).toFixed(1) : "0.0";
-    
-    const barWidth = 21;
+    const barWidth = 20;
     const completed = Math.round((percentage / 100) * barWidth);
     const bar = "█".repeat(completed).padEnd(barWidth, "░");
 
-    return `${label.padEnd(12)} ${count.toString().padStart(3)} commits    ${bar} ${percentage}%`;
+    return `${label.padEnd(12)} ${count.toString().padStart(3)} commits    ${bar} ${percentage.padStart(5)}%`;
   });
 
   const filesUpdate = {};
