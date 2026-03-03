@@ -8,7 +8,6 @@
 
 ![Gist Update](https://img.shields.io/badge/Status-Live_Updates-0078D4?style=for-the-badge&logo=github&logoColor=white)
 ![Automation](https://img.shields.io/badge/Powered_By-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![Timezone](https://img.shields.io/badge/Region-Asia%2FJakarta-8A2BE2?style=for-the-badge&logo=target&logoColor=white)
 
 <br />
 
