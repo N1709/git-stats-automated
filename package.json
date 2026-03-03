@@ -1,11 +1,7 @@
 {
-  "name": "git-stats-automated",
-  "version": "1.0.0",
-  "main": "index.js",
   "dependencies": {
     "@octokit/rest": "^19.0.0",
-    "axios": "^1.4.0",
-    "date-fns": "^2.30.0",
-    "date-fns-tz": "^2.0.0"
+    "date-fns-tz": "^1.3.7",
+    "axios": "^1.3.0"
   }
 }
