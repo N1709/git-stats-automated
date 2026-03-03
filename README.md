@@ -6,8 +6,9 @@
 
 <br />
 
-![Gist Update](https://img.shields.io/badge/Status-Live_Updates-0078D4?style=for-the-badge&logo=github&logoColor=white)
-![Automation](https://img.shields.io/badge/Powered_By-GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-FF4B2B?style=for-the-badge&logo=statuspage&logoColor=white)
+![Traffic](https://img.shields.io/badge/TRAFFIC-REAL--TIME-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![MIT License](https://img.shields.io/badge/LICENSE-MIT-FF1493?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
 
 <br />
 
@@ -40,8 +41,9 @@ The system is pre-configured to run every hour. You can also trigger it manually
 - **Visuals**: Precise 20-character bar chart with fixed-width alignment.
 - **Backend**: Node.js using `@octokit/rest` for seamless GitHub API integration.
 
-<br />
+**inspired by https://github.com/maxam2017/productive-box**
 
+<br />
 *Crafted for developers who value precision in their profile.*
 
 </div>
