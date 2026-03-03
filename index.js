@@ -50,7 +50,7 @@ async function updateGist() {
   const currentGreeting = greetings[maxType][Math.floor(Math.random() * greetings[maxType].length)];
 
   const statsLines = Object.entries(stats).map(([label, count]) => {
-    const percentage = totalCommits > 0 ? ((count / totalCommits) * 100).toFixed(1) : "0.0";
+    const percentage = ((count / 100) * 100).toFixed(1);
     const barWidth = 20;
     const completed = Math.round((percentage / 100) * barWidth);
     const bar = "█".repeat(completed).padEnd(barWidth, "░");
