@@ -1,49 +1,51 @@
 <div align="center">
 
-# Productivity Pulse 🚀
-
-**An automated system to track and display your GitHub activity distribution.**
-
-<br />
-
-![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-FF4B2B?style=for-the-badge&logo=statuspage&logoColor=white)
-![Traffic](https://img.shields.io/badge/TRAFFIC-REAL--TIME-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![MIT License](https://img.shields.io/badge/LICENSE-MIT-FF1493?style=for-the-badge&logo=opensourceinitiative&logoColor=white)
+# ✧ Productivity Pulse
+**The quiet architecture of your daily progress.**
 
 <br />
 
-### 📊 Personal Coding Rhythm
-This tool analyzes your last 100 public events to generate a precise visual representation of your productivity across four time segments: Morning, Daytime, Evening, and Night.
+![Updates](https://img.shields.io/badge/Status-Automated-000000?style=for-the-badge)
+![Traffic](https://img.shields.io/badge/Engine-Node.js-ffffff?style=for-the-badge&logo=node.js&logoColor=000000)
+![License](https://img.shields.io/badge/License-MIT-000000?style=for-the-badge)
+
+<br />
+
+### ━ Overview ━
+*A sophisticated utility designed to translate GitHub activity into a refined visual narrative. Minimalist in form, precise in function.*
 
 ---
 
-### 🛠️ Configuration Guide
+### ◈ Engineering Excellence
+**Dynamic Scaling** • **High-Density Visuals** • **Temporal Precision**
 
-#### 1. Setup Environment Secrets
-Go to your repository **Settings > Secrets and variables > Actions** and add these three secrets:
+<br />
 
-| Name | Value Description |
+#### ⚙️ Integration
+Define your environment within **GitHub Secrets** to begin synchronization:
+
+| Key | Definition |
 | :--- | :--- |
-| **GH_TOKEN** | Your Personal Access Token (classic) with `gist` and `repo` scopes. |
-| **GIST_ID** | The ID from your Gist URL (e.g., `https://gist.github.com/user/`**`id_di_sini`**). |
-| **TIMEZONE** | Your local timezone (default: `Asia/Jakarta`). |
-
-#### 2. Workflow Trigger
-The system is pre-configured to run every hour. You can also trigger it manually:
-- Go to the **Actions** tab.
-- Select the **Update Gist** workflow.
-- Click **Run workflow**.
+| **`GH_TOKEN`** | Personal Access Token with scope `gist` and `repo`. |
+| **`GIST_ID`** | The unique identifier for your destination Gist. |
+| **`TIMEZONE`** | Temporal alignment for accurate data mapping. |
 
 ---
 
-### 💻 Technical Implementation
-- **Scale**: Dynamic percentage calculation based on actual commit volume.
-- **Visuals**: Precise 20-character bar chart with fixed-width alignment.
-- **Backend**: Node.js using `@octokit/rest` for seamless GitHub API integration.
-
-**inspired by https://github.com/maxam2017/productive-box**
+### 🏛️ Technical Profile
+* **Infrastructure:** Automated via GitHub Actions.
+* **Data Source:** Live synchronization with the GitHub REST API.
+* **Visual Logic:** Fixed-width 20-segment bar charts.
 
 <br />
-*Crafted for developers who value precision in their profile.*
+
+### ✒️ Acknowledgments
+*This work is an evolution inspired by [maxam2017](https://github.com/maxam2017). Refined and maintained with precision by [N1709](https://github.com/n1709).*
+
+<br />
+
+---
+**[ ⧗ ]**
+*Refined for those who value the silence of efficiency.*
 
 </div>
