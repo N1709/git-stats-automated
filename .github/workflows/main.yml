@@ -2,19 +2,30 @@ name: Update Gist
 on:
   schedule:
     - cron: "0 * * * *"
+  push:
+  pull_request:
   workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   update-gist:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
-      - run: npm install
-      - run: node index.js
+          node-version: 20
+          cache: 'npm'
+
+      - run: npm ci
+
+      - name: Update Pulse
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIST_ID: ${{ secrets.GIST_ID }}
           TIMEZONE: ${{ secrets.TIMEZONE }}
-          MY_PLAYLIST_LINK: ${{ secrets.MY_PLAYLIST_LINK }}
+        run: node index.js
